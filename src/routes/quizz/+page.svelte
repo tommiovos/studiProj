@@ -12,6 +12,7 @@
     function onResize() {
         windowWidth = window.innerWidth;
         if (el) {
+            storedEl = el;
             if (!observerActive) {
                 setTimeout(() => {
                     observerActive = true;
@@ -38,6 +39,7 @@
     let elHeight;
     let observer;
     let observerActive = false;
+    let storedEl;
     onMount(() => {
         setTimeout(() => {
             loaded = true;    
@@ -46,6 +48,7 @@
         setTimeout(() => {
             observer = createObserver();
             if (el) {
+                storedEl = el;
                 observerActive = true;
                 observer.observe(el);
             };
@@ -65,8 +68,8 @@
                 //TODO: check this
                 document.querySelector("body").style.backgroundColor = "";
             }
-            if (observerActive) {
-                observer.unobserve(el);    
+            if (observerActive && observer != null) {
+                observer.unobserve(storedEl);    
             }
         };
     });

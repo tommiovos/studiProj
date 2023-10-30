@@ -752,7 +752,7 @@
                         <div>
                             <p class="md-text">Mon plateau de jeu</p>
                             <div class="selected-board-img-cont">
-                                <img src="images/board-{selectedBoard}.png" alt="">    
+                                <img src="images/board-{selectedBoard+1}.png" alt="">    
                             </div>
                         </div>
                     </div>
@@ -809,6 +809,18 @@
         display: flex;
         flex-direction: row;
         gap: 22px
+    }
+    @media screen and (min-width:681px) and (max-width:1080px) {
+        .boards {
+            flex-wrap: wrap !important;
+        }
+    }
+    @media screen and (max-width:680px) {
+        .boards {
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .board-img-cont {
