@@ -1,6 +1,9 @@
-<script></script>
+<script>
+</script>
+
 
 <slot></slot>
+
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
@@ -14,7 +17,15 @@
 
     :global(body) {
         background-color: #F0FEFF;
+        margin: 0;
     }
+
+    /* @media screen and (min-width:1080px) {
+        :global(body) {
+            background-color: white;
+            margin: 0;
+        }
+    } */
 
     :global(h1, h2, h3, h4, p, span, div, button) {
         font-family: 'Inter', sans-serif;
@@ -38,12 +49,14 @@
         color: white;
         border: none;
         border: 2px solid var(--purple);
+        text-decoration: none;
     }
 
     :global(.btn-sec) {
         border: 2px solid var(--purple);
         background-color: #FFF;
         color: var(--purple);
+        text-decoration: none;
     }
 
     :global(.btn-special) {

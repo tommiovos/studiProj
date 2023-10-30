@@ -1,4 +1,5 @@
 <script>
+    import { createEventDispatcher } from "svelte";
     export let subject;
     export let question;
     export let answers;
@@ -14,12 +15,13 @@
     function selectAnswer(answer) {
         selectedAnswer = answer.text;
         wasAnswerPicked = true;
-        console.log(answeredList);
         answeredList.push({subject: subject, isRight: answer.isRight});
         currentQuestionId += 1;
 
         localStorage.setItem('answers', JSON.stringify(answeredList));
         localStorage.setItem('currStep', JSON.stringify(currentQuestionId));
+
+        dispatch('answerQuestion');
     }
 
     function getTextSize(textSizeStr) {
@@ -35,6 +37,8 @@
         }
         return size;
     }
+
+    const dispatch = createEventDispatcher();
 </script>
 
 <div class="question">
