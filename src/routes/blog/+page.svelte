@@ -19,7 +19,7 @@
             img: "blog3.png",
         },
         {
-            title: "Les cafés des jeux en plein expansion !",
+            title: "Les cafés des jeux en pleine expansion !",
             text: "",
             img: "blog4.png",
         }

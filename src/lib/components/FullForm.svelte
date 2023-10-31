@@ -718,8 +718,7 @@
                 <div class="form-page-cont">
                     <h1 class="purple-text text-center">Créez vos pions personnalisés</h1>                    
                     <div class="pawn-selection">
-                        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.490/build/spline-viewer.js"></script>
-                        <spline-viewer loading-anim url="https://prod.spline.design/7vt1k3b9zQsuChhv/scene.splinecode"></spline-viewer>
+                        <iframe title="pawn-selector" src='https://my.spline.design/untitled-3757e644012462f564eff029328e4062/' frameborder='0' width='100%' height='100%'></iframe>
                     </div>
 
                     <div style="display: flex; flex-direction: column; gap: 20px;">
