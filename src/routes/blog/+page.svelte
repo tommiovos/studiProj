@@ -9,7 +9,7 @@
             img: "blog1.png",
         },
         {
-            title: "Comme l'IA peut améliorer l'apprentissage",
+            title: "Comment l'IA peut améliorer l'apprentissage",
             text: "Brainbud",
             img: "blog2.png",
         },
