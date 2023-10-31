@@ -79,7 +79,7 @@
             [
                 {
                     text: "6Kg",
-                    isRight: true
+                    isRight: false
                 },
                 {
                     text: "8Kg",
@@ -87,7 +87,7 @@
                 },
                 {
                     text: "4Kg",
-                    isRight: false
+                    isRight: true
                 }
             ],
             textSize: "md"

@@ -73,6 +73,9 @@
         .discover-btn img {
             display: none !important;
         }
+        .discover-btn > span {
+            text-align: center;
+        }
     }
 
     h2 {
