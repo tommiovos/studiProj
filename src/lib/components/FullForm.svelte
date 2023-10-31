@@ -446,10 +446,10 @@
     ];
 
     let checkboxes2 = [
-        {id: "dexterity", text: "Jeux de dextérité"},
+        {id: "dexterity", text: "Jeux d'adresse"},
         {id: "strat", text: "Jeux de stratégie"},
         {id: "adventure", text: "Jeux d'aventure"},
-        {id: "classicBoard", text: "Jeux de plateau classiques"},
+        {id: "classicBoard", text: "Jeux de plateaux classiques"},
         {id: "quizz", text: "Quizz"},
     ];
 
@@ -489,10 +489,10 @@
             case 6: return "CE2";
             case 7: return "CM1";
             case 8: return "CM2";
-            case 9: return "6eme";
-            case 10: return "5eme";
-            case 11: return "4eme";
-            case 12: return "3eme";
+            case 9: return "6ème";
+            case 10: return "5ème";
+            case 11: return "4ème";
+            case 12: return "3ème";
             case 13: return "Seconde";
             case 14: return "Première";
             case 15: return "Terminale";
@@ -739,7 +739,7 @@
                                 </div>
                             {:else}
                                 <p class="md-text">Mes types de jeux choisis</p>
-                                <p>Jeux de dextérité</p>
+                                <p>Jeux d'adresse</p>
                                 <p>Jeux d'aventure</p>
                             {/if}
                         </div>

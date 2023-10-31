@@ -10,7 +10,7 @@
         },
         {
             picture: "game3.png",
-            name: "Les aventuries du rail (Europe)",
+            name: "Les aventuriers du rail (Europe)",
         },
         // {
         //     picture: "game4.jpg",
