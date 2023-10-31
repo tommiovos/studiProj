@@ -92,7 +92,7 @@
     }
 
     :global(.btn-special::before) {
-        content: url(images/sparkle.svg);
+        content: url(/images/sparkle.svg);
         width: auto;
         height: 80%;
         display: flex;
