@@ -2,27 +2,27 @@
     let userTexts = [
         {
             picture: "",
-            name: "Marie G",
-            age: 34,
-            text: "“J’ai commencé à utiliser BrainBud il y’a 2 mois pour mes 2 enfants....”"
+            name: "Mireille",
+            age: 42,
+            text: "“En tant que parent, je trouve ce jeu fantastique pour aider mes enfants à apprendre tout en s'amusant.”"
         },
         {
             picture: "",
-            name: "Pierre P.",
+            name: "Léa",
+            age: 15,
+            text: "“J'ai trouvé les jeux en anglais super utiles pour améliorer mon vocabulaire. C'est une manière cool de se préparer pour les examens d'anglais.”"
+        },
+        {
+            picture: "",
+            name: "Pierre",
             age: 22,
-            text: "“J’ai commencé à utiliser BrainBud il y’a 2 mois pour mes 2 enfants....”"
+            text: "“J'ai utilisé des modules personnalisés dans ma classe et les résultats ont été impressionnants !”"
         },
         {
             picture: "",
-            name: "Marc A.",
-            age: 56,
-            text: "“J’ai commencé à utiliser BrainBud il y’a 2 mois pour mes 2 enfants....”"
-        },
-        {
-            picture: "",
-            name: "Océane G.",
-            age: 28,
-            text: "“J’ai commencé à utiliser BrainBud il y’a 2 mois pour mes 2 enfants....”"
+            name: "Mehdi",
+            age: 13,
+            text: "“Le module de quizzs sur l'histoire est trop cool ! J'ai appris plein de choses sur les différentes civilisations.”"
         }
     ]
 </script>

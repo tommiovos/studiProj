@@ -64,6 +64,7 @@
        align-items: center;
        cursor: pointer;
        box-sizing: border-box;
+       transition: opacity 0.2s ease-out;
     }
 
     :global(.btn-main) {
@@ -87,6 +88,7 @@
         background: #00E8FC;
         color: var(--purple);
         padding: 20px 29px 20px 24px;
+        text-decoration: none;
     }
 
     :global(.btn-special::before) {
@@ -98,6 +100,12 @@
         align-items: center;
         padding-top: 5px;
         padding-right: 5px;
+        transform: scale(1) rotate(0deg);
+        transition: transform 0.1s ease-out;
+    }
+
+    :global(.btn-special:hover::before) {
+        transform: scale(1.15) rotate(-10deg);
     }
 
     :global(.purple-text) {

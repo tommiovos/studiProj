@@ -19,7 +19,7 @@
             img: "blog3.png",
         },
         {
-            title: "Le développement des cafés des jeux",
+            title: "Les cafés des jeux en plein expansion !",
             text: "",
             img: "blog4.png",
         }
@@ -75,9 +75,10 @@
         margin: 0;
         padding: 12px;
         width: max-content;
-        background-color: white;
+        background-color: #00E8FC;
         border-radius: 12px;
         max-width: 80%;
+        color: var(--purple);
     }
     .blog:nth-child(1) > p {
         font-size: 30px;
@@ -110,6 +111,7 @@
                 !important
             ;
             height: auto !important;
+            max-height: unset !important;
         }
         .blog {
             padding: 20px !important;

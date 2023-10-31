@@ -46,6 +46,7 @@
         
         <ul>
             <li><a href="/">Accueil</a></li>
+            <li><a href="/quizz">Créer un jeu</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/catalog">Catalogue</a></li>
         </ul>
@@ -53,7 +54,7 @@
     
     <div class="other-links-pc">
         <div><a href="/account"><img src="images/account.svg" alt=""></a></div>
-        <div><a href="/"><img src="images/cart.svg" alt=""></a></div>
+        <div><a href="/account"><img src="images/cart.svg" alt=""></a></div>
     </div>
 
     <!-- svelte-ignore a11y-no-static-element-interactions -->

@@ -288,33 +288,33 @@
     let games = [
         {
             recommendedFor: [french],
-            title: "Grammaire renforcé",
-            text: "Jeux de renforcement du français comportant ......."
+            title: "Grammaire renforcée",
+            text: "Plongez dans l'univers fascinant de la langue française ! Ce module apporte une touche ludique à l'apprentissage de la grammaire, avec des jeux captivants qui renforcent les compétences linguistiques de manière amusante et interactive"
         },
         {
             recommendedFor: [maths],
             title: "Réflexion",
-            text: "Jeux pour travailler la logique et la résolution de problèmes ......."
+            text: "Aiguisez votre esprit avec des défis de logique et de réflexion ! Conçu pour stimuler l'intellect, ce module propose des puzzles, des casse-têtes et des énigmes qui garantissent des heures de réflexion intense et de plaisir."
         },
         {
             recommendedFor: [maths],
             title: "Tables de multiplications",
-            text: "Jeux pour travailler la logique et la résolution de problèmes ......."
+            text: "Maîtrisez les tables de multiplication comme jamais auparavant ! Ce module transforme l'apprentissage des multiplications en une aventure captivante, avec des jeux dynamiques et des activités engageantes qui rendent les mathématiques excitantes."
         },
         {
             recommendedFor: [geo, history],
             title: "Renforcement en Géographie",
-            text: "Jeux de stratégie basé sur la carte du monde réelle pour apprendre sa Géographie !"
+            text: "Voyagez autour du globe depuis votre salon ! Ce module enrichit les connaissances géographiques à travers des jeux de stratégie basé sur la carte du monde pour vous captiver et éveiller vptre curiosité envers notre monde."
         },
         {
             recommendedFor: [history],
             title: "Quizzs histoire",
-            text: "Des questions sur l'histoire pour s'améliorer en uin rien de temps !"
+            text: "Revivez les moments clés de l'histoire ! Parcourez différentes époques à travers des quizzs captivants et des jeux de rôle historiques. Ce module offre une manière immersive et divertissante d'apprendre l'histoire mondiale."
         },
         {
             recommendedFor: [en],
             title: "Jeux en anglais",
-            text: "Jeux pour renforcer ses connaissances dans la langue de Shakespear"
+            text: "Perfectionnez votre anglais tout en vous amusant ! Avec une variété de jeux et d'activités en anglais, ce module est parfait pour améliorer la compréhension et l'expression dans une ambiance ludique et éducative."
         }
     ];
 
@@ -338,7 +338,6 @@
 
 
         let result = subjectsSorted.slice(0, 3).map(item => item.subject);
-        console.log(result);
         // Selecting the top 3 subjects with the worst ratio
         return result
     }
@@ -384,8 +383,6 @@
         let storedOrder = localStorage.getItem('order');
         let storedOrderConfirmed = localStorage.getItem('orderConfirmed');
 
-        console.log(storedQuizzDone);
-        console.log(storedFormStep);
         if (storedOrder) {
             order = JSON.parse(storedOrder);
         }
@@ -573,7 +570,7 @@
         localStorage.setItem('orderConfirmed', JSON.stringify(false));
     }
 
-    let selectedBoard;
+    let selectedBoard = null;
     function selectBoard(i) {
         selectedBoard = i;
         localStorage.setItem("selectedBoard", JSON.stringify(i));
@@ -586,7 +583,9 @@
     {#if formDone == false}
         <div class="form-steps-cont" in:transitionIn={{easing:quintInOut, distance: 500, duration: 550}} out:transitionOut={{easing:quintInOut, distance: 500, duration: 550}}>
             <h1 class="purple-text text-center">Bienvenue sur le configurateur de jeu BrainBud !</h1>
-            <p class="text-center" style="min-height: 200px; padding-bottom: 16px; padding-top:12px;">C’est ici que vous pourrez lorem ipsum dolor sit amet consectetur. Tristique eleifend non ultrices in nisi pretium tortor leo. Elementum vitae metus ullamcorper condimentum vulputate. Libero enim enim sed natoque tempor diam leo ac. Luctus aliquet tellus semper in tellus nulla. Scelerisque suspendisse metus diam est volutpat aliquet aliquet purus sit. Mattis auctor hendrerit in eu neque adipiscing lacinia. Sit in volutpat molestie quis.</p>
+            <p class="text-center sm-text" style="min-height: 200px; padding-bottom: 16px; padding-top:12px;">
+                Prêt à créer votre aventure éducative personnalisée ? Avec BrainBud, chaque joueur devient le maître de son parcours d'apprentissage. Ce configurateur interactif est conçu pour vous guider pas à pas dans la création d'une expérience de jeu unique, adaptée à vos intérêts et à votre niveau. Que vous souhaitiez approfondir vos connaissances en histoire, maîtriser une nouvelle langue, ou devenir un as des mathématiques, BrainBud est là pour transformer l'apprentissage en une expérience ludique et captivante. Répondez à quelques questions simples pour commencer, et notre système de recommandation intelligent s'occupera du reste, en vous proposant des modules sur-mesure. Lancez-vous dans l'aventure BrainBud et découvrez le plaisir d'apprendre en jouant !
+            </p>
             
             <div class="buttons">
                 <a class="btn-sec" href="/">Retour</a>
@@ -645,6 +644,7 @@
             <div in:transitionIn={{easing:quintInOut, distance: 500, duration: 550, delay: 100}} out:transitionOut={{easing:quintInOut, distance: 500, duration: 550}}>
                 <div class="form-page-cont">
                     <h1 class="purple-text text-center">Matières / disciplines à travailler</h1>
+                    <p class="sm-text">Que vous soyez passionné par les défis linguistiques, la découverte géographique, les mystères de l'histoire, ou les énigmes mathématiques, chaque type de jeu est conçu pour stimuler votre curiosité et renforcer vos compétences.</p>
                     <div class="checkboxes-cont">
                         {#each checkboxes as checkbox}
                             <label for={checkbox.id} class="checkbox {selection.includes(checkbox.id) ? 'checked' : 'test'}">
@@ -662,7 +662,7 @@
                     
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <button class="btn-sec" on:click={() => previousFormStep()}>Retour</button>
-                        <button class="btn-main" on:click={() => nextFormStep()}>Confirmer ma sélection</button>    
+                        <button class="btn-main" style="opacity: {selection.length >= 1 ? '1' : '0.5'}" on:click={() => {if (selection.length >= 1) {nextFormStep()}}}>Confirmer ma sélection</button>    
                     </div>    
                 </div>
             </div>
@@ -670,7 +670,9 @@
             <div in:transitionIn={{easing:quintInOut, distance: 500, duration: 550, delay: 100}} out:transitionOut={{easing:quintInOut, distance: 500, duration: 550}}>
                 <div class="form-page-cont">
                     <h1 class="purple-text text-center">Types de jeux</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi delectus consequatur cumque earum facere commodi itaque, aperiam labore obcaecati consectetur rerum quibusdam temporibus autem eligendi libero similique nobis debitis. Suscipit aliquid veniam architecto eaque voluptatibus fuga delectus assumenda perspiciatis quis.</p>
+                    <p class="sm-text">
+                        Ici, vous avez la liberté de choisir le style de jeu qui correspond le mieux à votre personnalité et à vos préférences d'apprentissage. Ici, pas besoin de passer par un quiz, vous êtes le capitaine de votre parcours ludique et éducatif !
+                    </p>
                     
                     <div class="checkboxes-cont">
                         {#each checkboxes2 as checkbox}
@@ -683,7 +685,7 @@
 
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <button class="btn-sec" on:click={() => previousFormStep()}>Retour</button>
-                        <button class="btn-main" on:click={() => nextFormStep()}>Confirmer ma sélection</button>    
+                        <button class="btn-main" style="opacity: {selectionGameTypes.length >= 1 ? '1' : '0.5'}" on:click={() => {if (selectionGameTypes.length >= 1) {nextFormStep()}}}>Confirmer ma sélection</button>    
                     </div>    
                 </div>
             </div>
@@ -691,7 +693,9 @@
             <div in:transitionIn={{easing:quintInOut, distance: 500, duration: 550, delay: 100}} out:transitionOut={{easing:quintInOut, distance: 500, duration: 550}}>
                 <div class="form-page-cont">
                     <h1 class="purple-text text-center">Donnez vie à votre jeu !</h1>
-                    <p>Molestias expedita optio porro sunt accusantium, odit tempore voluptatem ad possimus a! Possimus tempora ducimus nostrum quisquam perferendis esse repellendus repudiandae</p>
+                    <p class="sm-text">
+                        Bienvenue dans l'univers créatif de BrainBud, où vous pouvez choisir le design de votre plateau de jeu ! Grâce à notre technologie de pointe basée sur l'IA, nous vous proposons une sélection unique de designs, tous plus captivants les uns que les autres. Que vous aimiez les motifs colorés, les thèmes inspirés de la nature, les univers fantastiques ou les designs futuristes, notre IA s'adapte à vos goûts pour vous offrir un choix personnalisé.
+                    </p>
                     
                     <div class="boards">
                         {#each {length: 4} as _, i}
@@ -705,7 +709,7 @@
 
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <button class="btn-sec" on:click={() => previousFormStepWithCheck()}>Retour</button>
-                        <button class="btn-main" on:click={() => nextFormStep()}>Confirmer ma sélection</button>    
+                        <button class="btn-main" style="opacity: {selectedBoard != null ? '1' : '0.5'}" on:click={() => { if (selectedBoard !=  null) {nextFormStep()}}}>Confirmer ma sélection</button>    
                     </div>    
                 </div>
             </div>
@@ -768,7 +772,7 @@
         <div in:transitionIn={{easing:quintInOut, distance: 500, duration: 550, delay: 100}} out:transitionOut={{easing:quintInOut, distance: 500, duration: 550}}>
             <div class="form-page-cont">
                 <h1 class="purple-text text-center">Commande confirmée !</h1>                    
-                <p>Votre commande à bien été prise en compte, vous pouvez suivre sa progression depuis votre compte !</p>
+                <p class="sm-text" style="font-size:20px; font-weight:500;">Votre commande à bien été prise en compte, vous pouvez suivre sa progression depuis votre compte !</p>
 
                 <div style="display: flex; flex-direction: column; gap: 20px;">
                     <a class="btn-sec" href="/">Retourner à l'accueil</a>
@@ -784,6 +788,12 @@
 
 
 <style>
+
+    .sm-text {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+    }
 
     .md-text {
         font-weight: 600;
@@ -1066,7 +1076,7 @@
         padding: 16px;
         gap: 12px;
         animation: appear-from-bot 0.45s ease-out backwards;
-        max-width: 500px;
+        max-width: 600px;
     }
 
     .r-0 {
@@ -1101,6 +1111,6 @@
     .reco-game-card > p:not(:first-child) {
         margin: 0;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
     }
 </style>

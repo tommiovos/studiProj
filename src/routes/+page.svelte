@@ -14,8 +14,15 @@
         </div>
         <section class="hero-desc">
             <h1>La technologie au service de l’apprentissage</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Ut sit quis sagittis interdum bibendum amet id lectus ut. Cursus habitant feugiat senectus senectus in id quis pellentesque. Pellentesque nulla nulla penatibus risus amet. Lacus semper dignissim sed vel faucibus proin quisque at nisl.</p>
-            <a class="btn-main" style="margin-top:16px;" href="/quizz">Découvrir</a>
+            <p>
+                Dans un monde où la technologie évolue à grande vitesse, 
+                BrainBud fait le lien entre l'apprentissage et le jeu.
+                Notre intelligence artificielle, créée avec l'aide de professionnels de l'éducation, analyse les réponses à un questionnaire ludique et personnalise 
+                l'expérience de chaque joueur, en recommandant des modules adaptés à ses besoins 
+                et à ses intérêts. Chaque module est conçu pour stimuler l'intellect tout en offrant 
+                un divertissement captivant. Alors, prêts à embarquer dans l'aventure passionnante qu'est l'apprentissage avec BrainBud ?
+            </p>
+            <a class="btn-special" style="margin-top:16px;" href="/quizz">Découvrir</a>
         </section>
     </div>
     <section class="feedback">
@@ -38,6 +45,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .hero-desc p {
+        font-size: 18px;
     }
     h1 {
         font-size: 30px;

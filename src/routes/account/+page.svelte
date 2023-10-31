@@ -15,7 +15,6 @@
         if (storedOrder) {
             savedOrder = JSON.parse(storedOrder);
         }
-        console.log(savedOrder);
     });
 </script>
 
@@ -215,8 +214,9 @@
         margin: 0;
     }
     .line:not(.titles) {
-        background-color: #F0FEFF;
+        background-color: #9B5DE5;
         padding: 10px 10px;
+        border-radius: 8px;
     }
     .line:not(.titles) > p {
         font-weight: 600;
