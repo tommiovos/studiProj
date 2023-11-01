@@ -4,14 +4,15 @@
 
     let blogPosts = [
         {
-            title: "Le développement du système BrainBud",
-            text: "",
-            img: "blog1.png",
-        },
-        {
             title: "Comment l'IA peut améliorer l'apprentissage",
             text: "Brainbud",
             img: "blog2.png",
+            link: "/blog-1"
+        },
+        {
+            title: "Le développement du système BrainBud",
+            text: "",
+            img: "blog1.png",
         },
         {
             title: "BraindBud gagne le prix EduGame",
@@ -31,9 +32,15 @@
     <Nav/>
     <div class="blogs-cont">
         {#each blogPosts as blogPost}
-            <div class="blog" style="background: url(images/{blogPost.img})">
-                <p>{blogPost.title}</p>
-            </div>
+            {#if blogPost.link}
+                <a class="blog" style="background: url(images/{blogPost.img})" href="{blogPost.link}">
+                    <p>{blogPost.title}</p>
+                </a>
+            {:else}
+                <div class="blog" style="background: url(images/{blogPost.img})">
+                    <p>{blogPost.title}</p>
+                </div>
+            {/if}
         {/each}
     </div>
 </div>
@@ -68,6 +75,13 @@
         max-width: 100%;
         overflow: hidden;
     }
+    .blog:hover > p {
+        transform: translateY(-10px) scale(1.02);
+    }
+    .blog:first-child {
+        cursor: pointer;
+        text-decoration: none;
+    }
     .blog > p {
         display: flex;
         font-size: 24px;
@@ -79,6 +93,8 @@
         border-radius: 12px;
         max-width: 80%;
         color: var(--purple);
+        transition: 0.13s ease-out;
+        transform: translateY(0px) scale(1);
     }
     .blog:nth-child(1) > p {
         font-size: 30px;

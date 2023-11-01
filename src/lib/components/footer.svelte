@@ -18,17 +18,30 @@
             {/each}    
         </div>    
     </div>
+    <div class="other-links-bloc">
+        <p>Liens utiles</p>
+        <div class="social-medias">
+            <a href="/blog">Blog</a>
+            <a href="/catalog">Catalogue</a>
+        </div> 
+    </div>
 </footer>
 
 
 <style>
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 4px 0px;
+    }
     footer {
         left: 0;
         height: 100px;
         background-color: var(--purple);
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        padding: 0px 20%;
     }
     p {
         margin: 0;
