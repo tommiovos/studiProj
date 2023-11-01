@@ -46,7 +46,7 @@
         
         <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/catalog">Créer un jeu</a></li>
+            <li><a href="/quizz">Créer un jeu</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/catalog">Catalogue</a></li>
         </ul>
