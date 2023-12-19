@@ -26,7 +26,7 @@
             <div class="pp-img-cont">
                 <img src="" alt="" class="pp-img">
             </div>
-            <p class="name">Rob LAUCHON</p>
+            <p class="name">Pierre DUPONT</p>
         </div>
         <div class="bot-sections">
             <div class="orders">
